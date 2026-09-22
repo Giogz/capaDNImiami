@@ -163,7 +163,7 @@ export const MANUAL: ManualData = {
     { titulo: 'Verificación en el SIO', detalle: 'Miami verifica cada Ficha Registral en la base de datos del **SIO**, por si tiene información adicional en el RENIEC (estado civil, renovación por rectificación, etc.).' },
     { titulo: 'Chequeo de duplicados', detalle: 'Si es un **duplicado**, los datos deben coincidir **exactamente** con el último DNI que emitió el RENIEC.' },
     { titulo: 'Registro en base de datos', detalle: 'Cada Ficha Registral se registra en la base de datos con el formulario, los apellidos, los nombres, la LE o el DNI y la fecha.', tabla: true },
-    { titulo: 'Acuse de recibo a Tampa', detalle: 'Miami revisa lo recibido y envía por correo el acuse de recibo al **Cónsul ad honórem de Tampa** (Sr. Juan Carlos Ibarra), informando cualquier irregularidad.' },
+    { titulo: 'Acuse de recibo a Tampa', detalle: 'Miami revisa lo recibido y envía por correo el acuse de recibo al **Cónsul ad honórem de Tampa**, informando cualquier irregularidad.' },
     { titulo: 'Envío al RENIEC', detalle: 'Las Fichas Registrales se envían al RENIEC con el **“Formato de Envío”**, consignando un número para Tampa.' },
   ],
 
