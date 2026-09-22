@@ -3,7 +3,7 @@ import type { ManualData } from '../types';
 const FOTO =
   'Fotografía tamaño pasaporte, fondo blanco, sin sonrisa, boca cerrada, sin prendas en la cabeza (salvo motivo religioso) y sin lentes.';
 const ACTA =
-  'Copia certificada del Acta de Nacimiento expedida por la Oficina Consular, la Municipalidad o la Oficina del RENIEC donde está registrado el nacimiento.';
+  'Copia certificada del Acta de Nacimiento expedida por la Oficina Consular, por oficina del RENIEC o por la Municipalidad donde está registrado el nacimiento.';
 
 export const MANUAL: ManualData = {
   meta: {
