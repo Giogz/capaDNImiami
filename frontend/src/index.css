@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #16181d;
+  --ink-2: #565b67;
+  --ink-3: #878d9b;
+  --paper: #ffffff;
+  --surface: #f2f3f6;
+  --surface-2: #e8eaef;
+  --line: #e0e3ea;
+  --line-2: #cdd2db;
+  --red: #c8102e;
+  --red-deep: #99001f;
+  --red-tint: #fbe9ec;
+  --amber: #8a5a00;
+  --amber-tint: #faf0d8;
+  --ok: #1f7a4d;
+  --ok-tint: #e6f2ea;
+  --top: calc(60px + env(safe-area-inset-top, 0px));
+  --bottom: calc(66px + env(safe-area-inset-bottom, 0px));
+}
+
+.dark {
+  --ink: #eef0f4;
+  --ink-2: #b3b9c6;
+  --ink-3: #828997;
+  --paper: #191b21;
+  --surface: #0f1116;
+  --surface-2: #22252d;
+  --line: #2b2f38;
+  --line-2: #3a3f4a;
+  --red: #f26177;
+  --red-deep: #f9899a;
+  --red-tint: #3a1620;
+  --amber: #e7bf6a;
+  --amber-tint: #33290f;
+  --ok: #5fca97;
+  --ok-tint: #12261c;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: var(--top);
+  }
+  body {
+    @apply bg-surface text-ink font-sans antialiased;
+    margin: 0;
+    overflow: hidden;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+}
+
+@layer components {
+  /* Recuadros de texto enriquecido dentro de requisitos */
+  .rich-code {
+    @apply font-mono text-[0.85em] text-peru bg-peru-tint px-1.5 py-0.5 rounded;
+  }
+  /* Barras superior/inferior translúcidas (evita opacidad sobre var()) */
+  .bar-glass {
+    background: color-mix(in srgb, var(--paper) 86%, transparent);
+  }
+  /* Bordes tintados sin depender del modificador /opacity de Tailwind */
+  .note-amber {
+    border-color: color-mix(in srgb, var(--amber) 40%, transparent);
+  }
+  .badge-ok {
+    border-color: color-mix(in srgb, var(--ok) 30%, transparent);
+  }
+}
+
+/* Barra de scroll discreta */
+.slide-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+.slide-scroll::-webkit-scrollbar-thumb {
+  background: var(--line-2);
+  border-radius: 100px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
